@@ -5,6 +5,8 @@ const hbs = require("hbs");
 const geoCode = require("./util/geocode");
 const forcast = require("./util/forcast");
 
+const port = process.env.PORT || 3000;
+
 const title = "Weather Service";
 const app = express();
 
@@ -66,6 +68,6 @@ app.get("/help/*", (req, res) => {
 app.get("*", (req, res) => {
   res.render("404", { message: "page not found" });
 });
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("Server is up..");
 });
