@@ -12,9 +12,9 @@ const app = express();
 
 app.set("view engine", "hbs");
 
-app.use(express.static(path.join(__dirname, "..\\public")));
-const viewPath = path.join(__dirname, "..\\templates\\views");
-const partialPath = path.join(__dirname, "..\\templates\\partials");
+app.use(express.static(path.join(__dirname, "../public")));
+const viewPath = path.join(__dirname, "../templates/views");
+const partialPath = path.join(__dirname, "../templates/partials");
 
 hbs.registerPartials(partialPath);
 app.set("views", viewPath);
